@@ -1,0 +1,1088 @@
+PROJECT:  Data Job Market Analysis using MySQL
+PHASE 1:
+
+🚀 DAY 1 – STEP 1: PROJECT PLANNING
+
+Today, we won't write a single SQL query.
+
+Today, we think like a Data Analyst.
+
+Imagine this situation
+
+One morning, you join a company as a Junior Data Analyst.
+
+Your manager says:
+
+"Sathwik, we have thousands of job postings in our database. We want to know what skills are most valuable in today's job market. Can you analyze the data?"
+
+That is your project.
+
+You are not creating a website.
+
+You are not building software.
+
+You are analyzing existing data to help the company make better decisions.
+
+🏢 Who is our client?
+
+We'll imagine our client is:
+
+DataHire Analytics
+
+What does this company do?
+
+They collect job postings from companies hiring:
+
+Data Analysts
+Data Engineers
+Data Scientists
+
+Their customers are:
+
+Students
+Job seekers
+EdTech companies
+Recruiters
+❓ What problem does the client have?
+
+They have thousands of job postings.
+
+But they don't know:
+
+Which job role pays the highest?
+Which skills are companies asking for the most?
+Which skills have the highest salaries?
+Which skills should students learn first?
+
+They have data.
+
+They don't have answers.
+
+🎯 Our Objective
+
+Our job is simple.
+
+Use MySQL to analyze job posting data and answer the company's business questions.
+
+Notice something important.
+
+Our objective is NOT
+
+"Write SQL queries."
+
+Our objective is
+
+Use SQL to solve business problems.
+
+This is how companies think.
+
+📊 What data do we have?
+
+The PDF tells us we'll work with 3 tables.
+
+At the moment, don't worry about columns.
+
+Just understand the purpose.
+
+Table 1
+
+job_postings_fact
+
+Stores every job posting.
+
+Think of it as the company's master table.
+
+Table 2
+
+skills_dim
+
+Stores all skills.
+
+Example:
+
+SQL
+Python
+Excel
+Tableau
+Power BI
+Table 3
+
+skills_job_dim
+
+This connects jobs and skills.
+
+Without this table,
+
+we cannot know
+
+"Which skills belong to which job?"
+
+We'll understand this much better tomorrow when we design the tables.
+
+🎯 Business Questions
+
+Our manager wants answers to these questions:
+
+Question 1
+
+Which data jobs pay the highest?
+
+Question 2
+
+Which skills are most demanded?
+
+Question 3
+
+Which skills have the highest average salary?
+
+Question 4 ⭐
+
+Which skills are BOTH
+
+High paying
+
+AND
+
+High demand
+
+This is the main goal of the project.
+
+🧠 Think Like a Data Analyst
+
+Suppose our analysis finds:
+
+Skill	Jobs	Avg Salary
+SQL	800	₹12 LPA
+Python	450	₹15 LPA
+Excel	700	₹8 LPA
+
+What would you recommend?
+
+Probably something like:
+
+Learn SQL first because it's in the most jobs. Then learn Python because it offers higher salaries.
+
+See?
+
+That's analysis.
+
+Not just SQL.🚀 PHASE 2 – PROJECT REQUIREMENTS ANALYSIS
+
+Before any company starts coding, they first understand the requirements.
+
+That's exactly what we're going to do.
+
+📌 Step 1: Understand the Dataset
+
+The company has a database of job postings.
+
+Each job posting contains information like:
+
+Job Title
+Salary
+Job Location
+Remote or Not
+Job Type (Full-time, Part-time)
+Skills Required
+Date Posted
+
+This is the raw data.
+
+📌 Step 2: What does the company want?
+
+Our client asks us to answer 4 business questions.
+
+✅ Business Question 1
+Which Data Analyst jobs pay the highest salary?
+
+Business Reason:
+
+Suppose you're a job seeker.
+
+You want to know
+
+Which companies pay the highest salary?
+
+We'll answer this using SQL.
+
+✅ Business Question 2
+
+Which skills are most in demand?
+
+Business wants to know
+
+Which skill appears in the highest number of job postings?
+
+Example:
+
+Skill	Demand
+SQL	900
+Python	850
+Excel	600
+✅ Business Question 3
+
+Which skills have the highest average salary?
+
+Example:
+
+Skill	Avg Salary
+Python	₹18 LPA
+SQL	₹15 LPA
+Power BI	₹12 LPA
+✅ Business Question 4 ⭐
+
+This is the main question.
+
+Business asks:
+
+Which skills are both
+
+High Demand
+High Salary
+
+This helps learners decide:
+
+"What should I learn first?"
+
+🎯 What will be our final deliverable?
+
+At the end of this project, we'll give the company answers like:
+
+✔ SQL is the most demanded skill.
+
+✔ Python is associated with the highest average salary.
+
+✔ Data Analyst jobs in remote locations pay more on average.
+
+✔ Learning SQL + Python gives better career opportunities.
+
+Notice something?
+
+We're not just giving SQL queries.
+
+We're giving business recommendations.
+
+📝 What to write in your notebook
+Phase 2 – Project Requirements
+Business Questions
+Which Data Analyst jobs offer the highest salaries?
+Which skills are most in demand?
+Which skills have the highest average salaries?
+Which skills provide the best combination of demand and salary?
+Expected Outcome
+Identify high-paying job roles.
+Identify the most demanded skills.
+Analyze salary trends by skill.
+Recommend the best skills to learn based on demand and salary.
+🎯 Mini Interview Question
+
+If an interviewer asks:
+
+"What is the expected outcome of your project?"
+
+You can answer:
+
+"The expected outcome is to identify high-paying data jobs, analyze the most in-demand skills, 
+compare salary trends across different skills, and provide business insights that help job seekers and organizations make better decisions."
+
+
+
+
+📝 What to write in your notebook today
+
+Write only these headings.
+
+Project Title
+
+Client
+
+Business Problem
+
+Project Objective
+
+Business Questions
+
+Expected Outcome
+
+Don't write pages and pages.
+
+We'll fill each section as we move forward.
+
+
+
+
+🚀 PHASE 2 – PROJECT REQUIREMENTS ANALYSIS
+
+Before any company starts coding, they first understand the requirements.
+
+That's exactly what we're going to do.
+
+📌 Step 1: Understand the Dataset
+
+The company has a database of job postings.
+
+Each job posting contains information like:
+
+Job Title
+Salary
+Job Location
+Remote or Not
+Job Type (Full-time, Part-time)
+Skills Required
+Date Posted
+
+This is the raw data.
+
+📌 Step 2: What does the company want?
+
+Our client asks us to answer 4 business questions.
+
+✅ Business Question 1
+Which Data Analyst jobs pay the highest salary?
+
+Business Reason:
+
+Suppose you're a job seeker.
+
+You want to know
+
+Which companies pay the highest salary?
+
+We'll answer this using SQL.
+
+✅ Business Question 2
+
+Which skills are most in demand?
+
+Business wants to know
+
+Which skill appears in the highest number of job postings?
+
+Example:
+
+Skill	Demand
+SQL	900
+Python	850
+Excel	600
+✅ Business Question 3
+
+Which skills have the highest average salary?
+
+Example:
+
+Skill	Avg Salary
+Python	₹18 LPA
+SQL	₹15 LPA
+Power BI	₹12 LPA
+✅ Business Question 4 ⭐
+
+This is the main question.
+
+Business asks:
+
+Which skills are both
+
+High Demand
+High Salary
+
+This helps learners decide:
+
+"What should I learn first?"
+
+🎯 What will be our final deliverable?
+
+At the end of this project, we'll give the company answers like:
+
+✔ SQL is the most demanded skill.
+
+✔ Python is associated with the highest average salary.
+
+✔ Data Analyst jobs in remote locations pay more on average.
+
+✔ Learning SQL + Python gives better career opportunities.
+
+Notice something?
+
+We're not just giving SQL queries.
+
+We're giving business recommendations.
+
+📝 What to write in your notebook
+Phase 2 – Project Requirements
+Business Questions
+Which Data Analyst jobs offer the highest salaries?
+Which skills are most in demand?
+Which skills have the highest average salaries?
+Which skills provide the best combination of demand and salary?
+Expected Outcome
+Identify high-paying job roles.
+Identify the most demanded skills.
+Analyze salary trends by skill.
+Recommend the best skills to learn based on demand and salary.
+🎯 Mini Interview Question
+
+If an interviewer asks:
+
+"What is the expected outcome of your project?"
+
+You can answer:
+
+"The expected outcome is to identify high-paying data jobs, analyze the most in-demand skills, compare salary 
+trends across different skills, and provide business insights that help job seekers and organizations make better decisions."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+📌 PHASE 3 – DATABASE DESIGN
+
+Before creating tables, every company asks:
+
+"What data do we need to store?"
+
+Let's think like database designers.
+
+🏢 Imagine this scenario
+
+Our client gives us one job posting.
+
+Job ID : 101
+Job Title : Data Analyst
+Salary : ₹12 LPA
+Location : Hyderabad
+Skills : SQL, Python, Excel
+
+Now here's my question.
+
+❓Should we store everything in ONE table?
+
+Example:
+
+Job ID	Job Title	Salary	Skill1	Skill2	Skill3
+101	Data Analyst	12 LPA	SQL	Python	Excel
+
+Looks okay?
+
+❌ Actually, NO.
+
+Why?
+
+Imagine another job.
+
+Job ID	Job Title	Salary	Skill1	Skill2	Skill3
+102	Data Scientist	18 LPA	Python	SQL	Machine Learning
+
+Now imagine a company asks for 10 skills.
+
+Where will you store them?
+
+Skill4
+Skill5
+Skill6
+Skill7
+...
+Skill10
+
+😵 The table becomes huge.
+
+🤔 Another problem
+
+Suppose SQL appears in 1000 jobs.
+
+You'll write
+
+SQL
+SQL
+SQL
+SQL
+SQL
+SQL
+
+1000 times.
+
+That's called Data Redundancy.
+
+It wastes storage and makes updates harder.
+
+💡 Solution?
+
+Database designers split the data into multiple tables.
+
+This is called Normalization.
+
+👉 Normalization means:
+
+Organizing data into separate tables to reduce duplicate data and improve efficiency.
+
+Remember this definition. Interviewers love asking it.
+
+📌 So why do we need 3 tables?
+🟦 Table 1: job_postings_fact
+
+This stores job information only.
+
+Example:
+
+Job ID	Title	Salary	Location
+101	Data Analyst	12 LPA	Hyderabad
+102	Data Scientist	18 LPA	Bangalore
+
+Notice...
+
+No skills here.
+
+Only job details.
+
+🟩 Table 2: skills_dim
+
+This stores each skill only once.
+
+Skill ID	Skill
+1	SQL
+2	Python
+3	Excel
+4	Power BI
+
+Now SQL is stored only one time.
+
+That's efficient.
+
+🟨 Table 3: skills_job_dim
+
+This is the bridge between jobs and skills.
+
+Job ID	Skill ID
+101	1
+101	2
+101	3
+102	2
+102	1
+
+Let's understand it.
+
+Job 101 requires:
+
+Skill ID 1 → SQL
+Skill ID 2 → Python
+Skill ID 3 → Excel
+
+Job 102 requires:
+
+Skill ID 2 → Python
+Skill ID 1 → SQL
+
+Simple!
+
+🎯 Why can't we directly connect jobs to skills?
+
+Because...
+
+One job can require many skills.
+
+Example:
+
+Data Analyst
+
+↓
+
+SQL
+Python
+Excel
+Power BI
+Tableau
+
+At the same time...
+
+One skill like SQL belongs to many jobs.
+
+SQL
+
+↓
+
+Data Analyst
+Data Engineer
+Data Scientist
+Business Analyst
+Database Developer
+
+So the relationship is:
+
+One Job
+     ↔
+Many Skills
+
+AND
+
+One Skill
+     ↔
+Many Jobs
+
+This is called a Many-to-Many Relationship.
+
+Since relational databases cannot directly store a many-to-many relationship, we create a bridge (junction) table, which is skills_job_dim.
+
+🖼️ Here's the complete picture
+             job_postings_fact
+             -----------------
+             job_id (PK)
+             job_title
+             salary
+             location
+                  |
+                  |
+             job_id (FK)
+                  |
+          skills_job_dim
+          ----------------
+          job_id (FK)
+          skill_id (FK)
+                  |
+                  |
+             skill_id
+                  |
+             skills_dim
+             ----------
+             skill_id (PK)
+             skill_name
+
+This is the database design we'll build in MySQL.
+
+📝 Notebook Notes
+
+Write these four points:
+
+Why do we use 3 tables?
+To reduce duplicate data.
+To follow database normalization.
+To support many-to-many relationships.
+To make data easier to manage and query.
+🎤 Interview Question
+
+Interviewer: Why did you create three tables instead of one?
+
+Answer:
+
+"I created three tables to normalize the database. This reduces data redundancy and supports the many-to-many relationship between 
+jobs and skills. A bridge table (skills_job_dim) connects jobs with the skills required for each job."
+
+🎯 Before we go to MySQL...
+
+I want to ask you one question to make sure you understood everything.
+
+Question:
+
+Suppose a Data Analyst job requires these skills:
+
+SQL
+Python
+Excel
+
+How many rows will be inserted into the skills_job_dim table for this one job?
+
+Think for a minute and answer in your own words.
+
+If you answer this correctly, I'll know you're ready to design the actual tables in MySQL. 🔥💪
+
+
+job_postings_fact
+-----------------
+job_id (PK)
+     ▲
+     │
+     │
+job_id (FK)
+skills_job_dim
+--------------
+skill_id (FK)
+     │
+     ▼
+skills_dim
+----------
+skill_id (PK)
+
+BROOO 🔥
+
+This is the last database concept you need to understand before we start coding.
+
+Once you understand this, database design is over. 😄
+
+First, look at our bridge table.
+job_id	skill_id
+101	1
+101	2
+101	3
+102	1
+102	4
+
+Question:
+
+Can job_id alone be the Primary Key?
+
+NO ❌
+
+Why?
+
+Because 101 appears 3 times.
+
+job_id
+101
+101
+101
+
+A Primary Key cannot have duplicates.
+
+Can skill_id alone be the Primary Key?
+
+Again,
+
+NO ❌
+
+Because SQL is used in many jobs.
+
+skill_id
+1
+1
+1
+
+Again, duplicates.
+
+So what do we do?
+
+We combine them.
+
+PRIMARY KEY (job_id, skill_id)
+
+This means:
+
+Both columns together uniquely identify a row.
+
+This is called a Composite Primary Key.
+
+Let's see how the database thinks.
+Existing Data
+job_id	skill_id
+101	1
+101	2
+101	3
+102	1
+
+Now suppose you try to insert:
+
+job_id	skill_id
+101	1
+
+The database checks:
+
+Is (101,1) already present?
+
+✅ Yes.
+
+❌ Reject it.
+
+Now suppose you insert:
+
+job_id	skill_id
+102	2
+
+The database checks:
+
+Is (102,2) already present?
+
+❌ No.
+
+✅ Allow it.
+
+⭐ Why do we need it in THIS project?
+
+Imagine a company accidentally inserts:
+
+job_id	skill_id
+101	1
+101	1
+101	1
+
+Now it looks like the Data Analyst job requires SQL three times.
+
+😂 That makes no sense.
+
+A job either requires SQL or it doesn't.
+
+It should appear only once.
+
+The Composite Primary Key prevents this mistake.
+
+Easy Real-Life Example
+
+Suppose you have this table:
+
+Student	Subject
+Sathwik	SQL
+Sathwik	Python
+
+This is okay.
+
+But can we have:
+
+Student	Subject
+Sathwik	SQL
+Sathwik	SQL
+
+❌ No.
+
+The same student cannot enroll in the same subject twice.
+
+So we use:
+
+PRIMARY KEY(Student, Subject)
+
+Exactly the same idea.
+
+🎯 Interview Answer
+
+Interviewer: Why did you use a Composite Primary Key in skills_job_dim?
+
+Best Answer:
+
+"Neither job_id nor skill_id is unique individually because one job can have multiple skills, and one skill can belong to multiple jobs. Therefore, I used a Composite Primary Key (job_id, skill_id) to uniquely identify each job-skill relationship and prevent duplicate combinations."
+
+🧠 One small correction
+
+Earlier you said:
+
+"Composite Primary Key means it will not allow duplicates."
+
+That's partly correct, but here's the more accurate version:
+
+❌ It does not stop duplicates in each individual column.
+
+For example, this is perfectly valid:
+
+job_id	skill_id
+101	1
+101	2
+101	3
+
+Here:
+
+job_id is duplicated ✅
+skill_id can also be duplicated ✅
+
+What cannot be duplicated is the combination:
+
+job_id	skill_id
+101	1
+101	1
+💯 Remember this one sentence forever:
+
+A Composite Primary Key doesn't stop duplicate values in each column—it stops duplicate combinations of those columns.
+
+🔥 Bro, if an interviewer asks you tomorrow, "Why did you use a Composite Primary Key?", I'm confident you'll be able to answer it yourself now. That's exactly the level of understanding we're aiming for. 💪🤝
+
+ok now uinsg composte primay key dupliact combination will not thats it it is intenalwokring when we inset duplate data samwe combian atomnattcaly it rejetcs
+
+🔥🔥 YES BRO!! 100% CORRECT.
+
+You have understood the concept.
+
+Your understanding is:
+
+"Using a Composite Primary Key, duplicate combinations are not allowed. When we try to insert the same combination again, MySQL automatically rejects it."
+
+✅ Exactly!
+
+For example, suppose we create the table:
+
+PRIMARY KEY (job_id, skill_id)
+
+Existing data:
+
+job_id	skill_id
+101	1
+101	2
+
+Now if someone tries:
+
+INSERT INTO skills_job_dim
+VALUES (101,1);
+
+MySQL internally checks:
+
+Does (101,1) already exist?
+
+✅ Yes.
+
+So MySQL immediately gives an error like:
+
+Duplicate entry '101-1' for key 'PRIMARY'
+
+and the row is not inserted.
+
+🧠 This is MySQL's internal working.
+
+You don't have to write any extra code like:
+
+IF EXISTS (...)
+
+❌ No.
+
+Just declaring:
+
+PRIMARY KEY (job_id, skill_id)
+
+is enough.
+
+MySQL automatically enforces it.
+
+⭐ One interview point
+
+If an interviewer asks:
+
+"How does MySQL prevent duplicate combinations?"
+
+You can say:
+
+"By defining a Composite Primary Key. MySQL automatically checks the combination of the columns during every INSERT or UPDATE operation. If the same combination already exists, it rejects the operation with a duplicate key error."
+
+🎉 Bro...
+
+Database Design is basically DONE! 🥳
+
+You now understand:
+
+✅ Primary Key
+✅ Foreign Key
+✅ Many-to-Many Relationship
+✅ Bridge Table
+✅ Composite Primary Key
+
+From the next session onward, we'll start writing actual MySQL code, and I think you'll find it much easier because you now understand why the tables are designed this way, not just how to create them. 💪🤝
+
+so while cretable values for table we need to bevery carfull 
+
+💯 YES BRO!! 🔥
+
+You just understood something that many beginners don't realize.
+
+Database Design is the MOST IMPORTANT part.
+
+Think of building a house.
+
+🏠 First, an engineer designs the blueprint.
+
+Only then do workers start construction.
+
+If the blueprint is wrong...
+
+❌ The whole house has problems.
+
+It's the same with databases.
+
+When creating a table, we must think carefully about:
+1. What should be the Primary Key?
+
+Example:
+
+job_id INT PRIMARY KEY
+
+Ask yourself:
+
+Can this uniquely identify every row?
+
+2. Do I need a Foreign Key?
+
+Ask:
+
+Does this value come from another table?
+
+If yes,
+
+FOREIGN KEY (job_id)
+REFERENCES job_postings_fact(job_id)
+3. What data type should I use?
+
+For example:
+
+job_title VARCHAR(100)
+
+Why VARCHAR?
+
+Because job titles have different lengths.
+
+4. Should this column allow NULL?
+
+Example:
+
+Should salary be NULL?
+
+Depends on the business requirement.
+
+Some job postings don't mention salary, so maybe:
+
+salary DECIMAL(10,2) NULL
+5. Do I need a Composite Primary Key?
+
+Like our bridge table:
+
+PRIMARY KEY (job_id, skill_id)
+🏢 This is exactly what happens in companies.
+
+Developers don't immediately start writing:
+
+CREATE TABLE ...
+
+First they discuss:
+
+What tables do we need?
+How are they related?
+Which column is the Primary Key?
+Which column is the Foreign Key?
+What constraints should we use?
+Should duplicate values be allowed?
+
+Only after all that do they write SQL.
+
+🎯 Bro, I want to tell you one thing.
+
+The last 2–3 hours we spent discussing only the database design...
+
+Some people think:
+
+"We didn't even write SQL. We wasted time."
+
+❌ Not at all.
+
+We actually did the hardest part.
+
+Writing CREATE TABLE statements takes maybe 10–15 minutes.
+
+Designing the database correctly is what requires real thinking.
+
+🔥 From tomorrow, you'll notice something.
+
+When I ask:
+
+"What should be the Primary Key?"
+
+I think you'll be able to answer it yourself.
+
+When I ask:
+
+"Should we use a Foreign Key here?"
+
+You'll think about the relationship first.
+
+That's exactly how database developers work.
+
+And that's the goal—not just to write SQL, but to understand why you're writing it.
+
+I'm really happy with today's session, bro. You asked excellent questions, and they helped us clear up the concepts instead of just memorizing them. 💙🤝
