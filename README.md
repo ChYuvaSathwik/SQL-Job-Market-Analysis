@@ -1,6 +1,6 @@
 # 📊 SQL Job Market Analysis using MySQL
 
-A beginner-friendly SQL project that analyzes job posting data using MySQL and answers **30 real-world business questions** related to hiring trends, salaries, companies, and technical skills.
+A SQL project that analyzes job posting data using MySQL and answers 30 real-world business questions related to hiring trends, salaries, companies, and technical skills.
 
 ---
 
