@@ -1,10 +1,16 @@
 # 📊 SQL Job Market Analysis using MySQL
 
-## 🚀 Project Overview
+A beginner-friendly SQL project that analyzes job posting data using MySQL and answers **30 real-world business questions** related to hiring trends, salaries, companies, and technical skills.
+
+---
+
+# 🚀 Project Overview
 
 The SQL Job Market Analysis project is designed to analyze job posting data using MySQL and answer real-world business questions through SQL queries.
 
-The project focuses on understanding hiring trends, salary distribution, required technical skills, and company hiring patterns by working with a relational database consisting of fact and dimension tables.
+The project focuses on understanding hiring trends, salary distribution, company hiring patterns, and the most in-demand technical skills by working with a relational database consisting of Fact and Dimension tables.
+
+As part of this project, I solved **30 real-world business questions** using SQL concepts such as JOINs, GROUP BY, HAVING, Aggregate Functions, and Sorting.
 
 This project demonstrates practical SQL skills commonly used by Data Analysts, Business Analysts, and SQL Developers.
 
@@ -19,7 +25,8 @@ The primary objectives of this project are:
 - Discover high-paying job roles
 - Compare average salaries across companies
 - Understand relationships between jobs and required skills
-- Practice writing real-world SQL business queries
+- Solve 30 real-world SQL business questions
+- Strengthen SQL problem-solving skills using practical datasets
 
 ---
 
@@ -35,7 +42,7 @@ The primary objectives of this project are:
 
 The database consists of three relational tables.
 
-### 1️⃣ Job_Postings_Fact
+### 1️⃣ job_postings_fact
 
 Stores job-related information such as:
 
@@ -49,7 +56,7 @@ Stores job-related information such as:
 
 ---
 
-### 2️⃣ Skills_Dim
+### 2️⃣ skills_dim
 
 Stores all available technical skills.
 
@@ -64,23 +71,63 @@ Examples:
 
 ---
 
-### 3️⃣ Skills_Job_Dim
+### 3️⃣ skills_job_dim
 
 Bridge table that connects jobs with skills.
 
-This table establishes a Many-to-Many relationship between Job_Postings_Fact and Skills_Dim.
+This table establishes a **Many-to-Many relationship** between `job_postings_fact` and `skills_dim`.
 
 ---
 
 # 🗃 Entity Relationship Diagram (ERD)
 
-*(ER_Diagram.png will be added here.)*
+The database consists of three related tables connected through a bridge table (`skills_job_dim`).
+
+```text
++-----------------------------+
+|      job_postings_fact      |
++-----------------------------+
+| PK  job_id                  |
+|     job_title               |
+|     company_name            |
+|     job_location            |
+|     salary_year_avg         |
+|     job_schedule_type       |
+|     job_work_from_home      |
++-----------------------------+
+             |
+             | job_id
+             |
+             ▼
++-----------------------------+
+|       skills_job_dim        |
++-----------------------------+
+| PK/FK job_id                |
+| PK/FK skill_id              |
++-----------------------------+
+             ▲
+             |
+             | skill_id
+             |
++-----------------------------+
+|         skills_dim          |
++-----------------------------+
+| PK  skill_id                |
+|     skill_name              |
++-----------------------------+
+```
+
+### Relationship
+
+- One job can require multiple skills.
+- One skill can belong to multiple jobs.
+- `skills_job_dim` acts as a bridge table that creates a **Many-to-Many relationship** between `job_postings_fact` and `skills_dim`.
 
 ---
 
 # 📈 Business Questions Solved
 
-Examples include:
+This project answers **30 real-world business questions**, including:
 
 - Count total job postings
 - Find unique job titles
@@ -91,6 +138,7 @@ Examples include:
 - Find jobs requiring SQL and Python
 - Count jobs by location
 - Find companies hiring the most employees
+- Analyze company skill requirements
 
 ---
 
@@ -100,6 +148,7 @@ This project demonstrates:
 
 - SELECT
 - WHERE
+- DISTINCT
 - ORDER BY
 - LIMIT
 - Aggregate Functions
@@ -115,6 +164,17 @@ This project demonstrates:
 
 ---
 
+# ⭐ Key Features
+
+- Designed a relational database using Fact and Dimension tables.
+- Solved 30 real-world business SQL queries.
+- Performed salary, hiring trend, and skill demand analysis.
+- Used multiple INNER JOINs across three related tables.
+- Implemented Aggregate Functions, GROUP BY, HAVING, ORDER BY, and LIMIT.
+- Documented the complete project with schema, queries, datasets, and screenshots.
+
+---
+
 # 📂 Project Structure
 
 ```text
@@ -123,7 +183,6 @@ SQL-Job-Market-Analysis
 ├── README.md
 ├── schema.sql
 ├── queries.sql
-├── ER_Diagram.png
 │
 ├── Data
 │   ├── Job_Postings_Fact_100.csv
@@ -205,16 +264,30 @@ SQL-Job-Market-Analysis
 Through this project, I gained hands-on experience in:
 
 - Designing relational databases
-- Understanding Primary and Foreign Keys
+- Understanding Primary Keys and Foreign Keys
 - Working with Fact and Dimension tables
-- Writing SQL business queries
-- Solving real-world analytical problems using SQL
-- Building a professional GitHub project
+- Writing business-oriented SQL queries
+- Performing data analysis using SQL
+- Using Aggregate Functions and GROUP BY
+- Writing multi-table INNER JOIN queries
+- Solving real-world business problems using SQL
+- Building and documenting a professional GitHub project
 
 ---
 
 # 👨‍💻 Author
 
-**Sathwik Chinta**
+## Sathwik Chinta
 
-Aspiring Software Engineer | SQL | Java | Python | DSA
+**Aspiring Software Engineer**
+
+### Skills
+
+- SQL
+- Java
+- Python
+- Data Structures & Algorithms (DSA)
+
+---
+
+⭐ **If you found this project helpful, consider giving it a Star on GitHub!**
