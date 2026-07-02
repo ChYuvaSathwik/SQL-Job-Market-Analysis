@@ -72,17 +72,9 @@ This table establishes a Many-to-Many relationship between Job_Postings_Fact and
 
 ---
 
-# 🗃 Database Relationship
+# 🗃 Entity Relationship Diagram (ERD)
 
-Job_Postings_Fact
-        │
-        │ job_id
-        ▼
-Skills_Job_Dim
-        ▲
-        │ skill_id
-        │
-Skills_Dim
+*(ER_Diagram.png will be added here.)*
 
 ---
 
@@ -131,14 +123,80 @@ SQL-Job-Market-Analysis
 ├── README.md
 ├── schema.sql
 ├── queries.sql
-├── data
-│   ├── Job_Postings_Fact.csv
-│   ├── Skills_Dim.csv
-│   └── Skills_Job_Dim.csv
+├── ER_Diagram.png
 │
-├── screenshots
-└── ER_Diagram.png
+├── Data
+│   ├── Job_Postings_Fact_100.csv
+│   ├── Skills_Dim_30.csv
+│   └── Skills_Job_Dim_500.csv
+│
+└── Screenshots
+    ├── database_tables.png
+    ├── query_results.png
+    ├── highest_paying_jobs.png
+    ├── most_demanded_skills.png
+    ├── top_hiring_companies.png
+    ├── average_salary_by_job_title.png
+    ├── jobs_requiring_sql_and_python.png
+    ├── skills_required_per_job.png
+    └── company_skill_requirements.png
 ```
+
+---
+
+# 📸 Project Screenshots
+
+## Database Tables
+
+![Database Tables](Screenshots/database_tables.png)
+
+---
+
+## Query Results
+
+![Query Results](Screenshots/query_results.png)
+
+---
+
+## Top 10 Highest Paying Jobs
+
+![Highest Paying Jobs](Screenshots/highest_paying_jobs.png)
+
+---
+
+## Most Demanded Skills
+
+![Most Demanded Skills](Screenshots/most_demanded_skills.png)
+
+---
+
+## Top Hiring Companies
+
+![Top Hiring Companies](Screenshots/top_hiring_companies.png)
+
+---
+
+## Average Salary by Job Title
+
+![Average Salary by Job Title](Screenshots/average_salary_by_job_title.png)
+
+---
+
+## Jobs Requiring SQL and Python
+
+![Jobs Requiring SQL and Python](Screenshots/jobs_requiring_sql_and_python.png)
+
+---
+
+## Skills Required Per Job
+
+![Skills Required Per Job](Screenshots/skills_required_per_job.png)
+
+---
+
+## Company Skill Requirements
+
+![Company Skill Requirements](Screenshots/company_skill_requirements.png)
 
 ---
 
