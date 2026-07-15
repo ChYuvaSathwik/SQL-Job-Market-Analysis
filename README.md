@@ -1,18 +1,18 @@
 # 📊 SQL Job Market Analysis using MySQL
 
-A SQL project that analyzes job posting data using MySQL and answers 30 real-world business questions related to hiring trends, salaries, companies, and technical skills.
+A SQL project that analyzes job posting data using MySQL and answers **30 real-world business questions** related to hiring trends, salaries, companies, and technical skills.
 
 ---
 
 # 🚀 Project Overview
 
-The SQL Job Market Analysis project is designed to analyze job posting data using MySQL and answer real-world business questions through SQL queries.
+The **SQL Job Market Analysis** project is designed to analyze job posting data using MySQL and answer real-world business questions through SQL queries.
 
 The project focuses on understanding hiring trends, salary distribution, company hiring patterns, and the most in-demand technical skills by working with a relational database consisting of Fact and Dimension tables.
 
 As part of this project, I solved **30 real-world business questions** using SQL concepts such as JOINs, GROUP BY, HAVING, Aggregate Functions, and Sorting.
 
-This project demonstrates practical SQL skills commonly used by Data Analysts, Business Analysts, and SQL Developers.
+This project demonstrates practical SQL skills commonly used by Data Analysts, Business Analysts, SQL Developers, and Software Engineers.
 
 ---
 
@@ -127,18 +127,38 @@ The database consists of three related tables connected through a bridge table (
 
 # 📈 Business Questions Solved
 
-This project answers **30 real-world business questions**, including:
+This project solves **30 real-world SQL business questions** covering data retrieval, filtering, aggregation, grouping, and multi-table analysis, including:
 
-- Count total job postings
-- Find unique job titles
-- Find the highest-paying jobs
-- Calculate average salary by company
-- Identify the most in-demand skills
-- Find jobs requiring SQL
-- Find jobs requiring SQL and Python
-- Count jobs by location
-- Find companies hiring the most employees
-- Analyze company skill requirements
+1. Count the total number of job postings.
+2. Find all unique job titles.
+3. Display jobs with a salary greater than **150000**.
+4. Find the Top **10** highest-paying jobs.
+5. Find the highest salary.
+6. Find the lowest salary.
+7. Find the average salary.
+8. Find all remote jobs.
+9. Count how many jobs are available for each job title.
+10. Count how many jobs each company has posted.
+11. Find the average salary offered by each company.
+12. Count jobs available in each location.
+13. Count jobs by schedule type.
+14. Find the highest salary offered by each company.
+15. Find the average salary for each job title.
+16. Which skills are required the most?
+17. Which jobs require SQL?
+18. Which jobs require Python?
+19. Which jobs require both SQL and Python?
+20. List all skills required for each job.
+21. Count how many jobs require each skill.
+22. Which companies are hiring for SQL skills?
+23. Which companies are hiring for Python skills?
+24. Count the number of skills required for each job.
+25. Which jobs require Excel?
+26. Find all skills required for Data Analyst jobs.
+27. Find all jobs that require AWS.
+28. Find all companies hiring Data Analysts.
+29. Count how many different skills each company requires.
+30. Find the Top 5 most in-demand skills.
 
 ---
 
@@ -167,7 +187,7 @@ This project demonstrates:
 # ⭐ Key Features
 
 - Designed a relational database using Fact and Dimension tables.
-- Solved 30 real-world business SQL queries.
+- Solved 30 real-world SQL business queries.
 - Performed salary, hiring trend, and skill demand analysis.
 - Used multiple INNER JOINs across three related tables.
 - Implemented Aggregate Functions, GROUP BY, HAVING, ORDER BY, and LIMIT.
@@ -266,6 +286,7 @@ Through this project, I gained hands-on experience in:
 - Designing relational databases
 - Understanding Primary Keys and Foreign Keys
 - Working with Fact and Dimension tables
+- Building Many-to-Many relationships using bridge tables
 - Writing business-oriented SQL queries
 - Performing data analysis using SQL
 - Using Aggregate Functions and GROUP BY
