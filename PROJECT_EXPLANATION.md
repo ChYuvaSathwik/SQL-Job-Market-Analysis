@@ -126,20 +126,38 @@ This reduces duplicate data and supports a Many-to-Many relationship between job
 
 ---
 
-## Business Questions Solved
+## Business Questions Answered Using SQL
 
-This project solves real-world business questions such as:
-
-1. Count total job postings.
-2. Find unique job titles.
-3. Find the highest-paying jobs.
-4. Calculate average salary by company.
-5. Find companies hiring the most employees.
-6. Identify the most in-demand skills.
-7. Find jobs requiring SQL.
-8. Find jobs requiring SQL and Python.
-9. Count jobs by location.
-10. Analyze company skill requirements.
+1. Count the total number of job postings.
+2. Find all unique job titles.
+3. Display jobs with a salary greater than 150000.
+4. Find the Top 10 highest-paying jobs.
+5. Find the highest salary.
+6. Find the lowest salary.
+7. Find the average salary.
+8. Find all remote jobs.
+9. Count how many jobs are available for each job title.
+10. Count how many jobs each company has posted.
+11. Find the average salary offered by each company.
+12. Count jobs available in each location.
+13. Count jobs by schedule type.
+14. Find the highest salary offered by each company.
+15. Find the average salary for each job title.
+16. Which skills are required the most?
+17. Which jobs require SQL?
+18. Which jobs require Python?
+19. Which jobs require both SQL and Python?
+20. List all skills required for each job.
+21. Count how many jobs require each skill.
+22. Which companies are hiring for SQL skills?
+23. Which companies are hiring for Python skills?
+24. Count the number of skills required for each job.
+25. Which jobs require Excel?
+26. Find all skills required for Data Analyst jobs.
+27. Find all jobs that require AWS.
+28. Find all companies hiring Data Analysts.
+29. Count how many different skills each company requires.
+30. Find the Top 5 most in-demand skills.
 
 ---
 
@@ -160,4 +178,4 @@ Through this project, I learned:
 
 ## Conclusion
 
-This project demonstrates practical SQL skills by solving real-world business problems using a relational database. It strengthened my understanding of database design, SQL querying, relational database concepts, and data analysis while helping me build a professional GitHub portfolio project.
+This project demonstrates practical SQL skills by solving real-world business problems using a relational database. It strengthened my understanding of database design, SQL querying, relational database concepts, data analysis, and business-oriented problem solving while helping me build a professional GitHub portfolio project.
